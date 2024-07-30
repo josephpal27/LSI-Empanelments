@@ -5,9 +5,22 @@
   scroll-behavior: smooth;
   /* font-family: "Montserrat", sans-serif; */
   /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
+
 /* --- Customize ScrollBars --- */
+::-webkit-scrollbar{
+  width: 0px;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: transparent;
+}
+
+
 .footer .center .linkedin-content::-webkit-scrollbar{
   width: 11px;
 }
@@ -23,6 +36,7 @@
 header {
   background-color: #ec9122;
   padding: 5px 0;
+  overflow: hidden;
 }
 .header {
   display: flex;
@@ -57,6 +71,7 @@ nav {
   /* position: sticky;
       top: 0;
       z-index: 20; */
+  overflow: visible;    
 }
 .nav {
   display: flex;
@@ -69,6 +84,7 @@ nav {
 .nav-menu ul {
   list-style-type: none;
   display: flex;
+  /* flex-direction: column; */
   gap: 1.7rem;
   margin-top: 1rem;
 }
@@ -88,6 +104,16 @@ nav {
 .nav-menu ul a:hover {
   color: #f7b100;
   scale: 1.05;
+}
+
+.nav-menu ul .fa-bars {
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
+  color: #656363;
+  display: none;
+}
+.nav-menu ul .fa-bars:hover {
+  color: #ec9122;
 }
 
 /* .nav-menu-contents{
@@ -142,6 +168,54 @@ nav {
   #content-box-6{
       left: 86.5%;
   } */
+
+
+  .nav-menu-2{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding: 0 50px 0 45vw;
+    float: right;
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 0.3s ease;
+  }
+  .nav-menu-2 a{
+    text-decoration: none;
+    color: #606060;
+    transition: all 0.2s ease;
+  }
+  .nav-menu-2 h6{
+    font-weight: 500;
+    padding: 7px 20px;
+  }
+  .nav-menu-2 a:hover{
+    color: #ec9122;
+  }
+
+  .nav-menu-2-content{
+    background-color: #ec9122;
+    /* padding: 10px 0 3px 0; */
+    border-radius: 10px;
+    /* height: 0; */
+    transition: all 0.2s ease;
+    width: max-content;
+    /* z-index: -10; */
+    /* opacity: -10; */
+    display: none;
+    margin-left: 2rem;
+  }
+  .nav-menu-2-content ul{
+    list-style-type: none;
+    padding: 10px 20px;
+  }
+  .nav-menu-2-content ul li{
+    padding: 5px 0;
+  }
+  .nav-menu-2-content a{
+    color: #fff;
+  }
 
 /* Nav Styles Ends Here */
 
@@ -209,6 +283,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .empanelment-with-banks h1{
   font-size: 2.8rem;
@@ -361,6 +436,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 .government-head img{
   width: 100%;
@@ -548,3 +624,531 @@ footer{
 }
 
 /* Footer Styles Ends Here */
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* --- Media Queries Start Here --- */
+
+@media screen and (min-width: 1400px) and (max-width: 1700px) {
+  /* Media for Navbar */
+  #content-box-1 {
+    left: 48.5%;
+  }
+  #content-box-2 {
+    left: 56%;
+  }
+  #content-box-3 {
+    left: 67%;
+  }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+/* Media for Navbar */
+#content-box-1 {
+  left: 41%;
+}
+#content-box-2 {
+  left: 49.5%;
+}
+#content-box-3 {
+  left: 62%;
+}
+
+/* Empanelment with Banks Styles Starts Here */
+.empanelment-with-banks{
+  padding: 2rem 0;
+}
+.bank-icon-row{
+  gap: 120px;
+}
+.bank-icon-row img{
+  width: 110px;
+  height: 110px;
+}
+.bank-icon-row:last-child{
+  padding: 0 10px;
+ }
+ .bank-icon>div{
+   height: 130px;
+   width: 130px;
+ }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+/* Media for Navbar */
+#content-box-1 {
+  left: 31%;
+}
+#content-box-2 {
+  left: 40.5%;
+}
+#content-box-3 {
+  left: 55.5%;
+}
+
+/* Top Image Styles Starts Here */
+.top-image .left-text{
+  position: absolute;
+  top: 40%;
+  padding: 0.8rem 2.6rem 0.8rem 2rem;
+}
+.top-image .left-text h2{
+  font-size: 2.8rem;
+}
+
+/* Empanelment with Banks Styles Starts Here */
+.empanelment-with-banks{
+  padding: 2rem 0;
+}
+.empanelment-with-banks h1{
+  font-size: 2.5rem;
+}
+.empanelment-with-banks .line{
+  width: 450px;
+  margin-bottom: 0.5rem;
+}
+.bank-icon-row{
+  gap: 50px;
+  margin-top: 2rem;
+}
+.bank-icon-row img{
+  width: 100px;
+  height: 100px;
+}
+.bank-icon-row:last-child{
+ align-self: flex-start;
+ padding: 0 10px;
+}
+
+#bank-logo-2{
+  width: 60px;
+  height: 60px;
+}
+#bank-logo-4,
+#bank-logo-5,
+#bank-logo-8,
+#bank-logo-9,
+#bank-logo-11,
+#bank-logo-12,
+#bank-logo-14,
+#bank-logo-16,
+#bank-logo-17,
+#bank-logo-18{
+  width: 70px;
+  height: 70px;
+}
+
+/* Financial Institutions Section Styles Starts Here */
+.financial-head .heading{
+  position: absolute;
+  top: 19%;
+}
+.financial-head .heading h1{
+  font-size: 2.1rem;
+}
+.institutions-row{
+  margin-top: 1rem;
+}
+.institution-icon{
+  width: 24%;
+}
+.institution-icon>div{
+  height: 160px;
+  width: 160px;
+}
+.institution-icon img{
+  width: 160px;
+  height: 160px;
+}
+.institution-icon p{
+  font-size: 0.8rem;
+}
+
+#institution-logo-1,
+#institution-logo-9{
+  width: 210px;
+  height: 210px;
+}
+
+/* Government Clients Section Styles Starts Here */
+.government-head .heading{
+  position: absolute;
+  top: 30%;
+}
+.government-head .heading h1{
+  font-size: 2.2rem;
+}
+.clients-icon img{
+  width: 150px;
+  height: 150px;
+}
+.clients-icon p{
+  font-size: 0.8rem;
+}
+
+#clients-logo-3,
+#clients-logo-4,
+#clients-logo-5,
+#clients-logo-22{
+  width: 120px;
+  height: 120px;
+}
+
+#clients-logo-6,
+#clients-logo-9,
+#clients-logo-11{
+  width: 90px;
+  height: 90px;
+}
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+/* Media for Navbar */
+nav{
+  padding: 6px 10px;
+}
+.nav-menu ul a {
+  display: none;
+}
+.nav-menu ul .fa-bars {
+  display: block;
+}
+.nav-menu-2{
+  padding: 0 50px 0 40vw;
+}
+
+/* Top Image Styles Starts Here */
+.top-image .left-text{
+  position: absolute;
+  top: 40%;
+  padding: 0.8rem 2rem 0.6rem 2rem;
+}
+.top-image .left-text h2{
+  font-size: 2rem;
+}
+
+/* Group Empanelments Styles Starts Here */
+.group-empanelment-content{
+  padding: 2.5rem 1rem;
+}
+.group-empanelment-content h1{
+  font-size: 2rem;
+}
+.group-empanelment-content p{
+  font-size: 1rem;
+}
+
+/* Empanelment with Banks Styles Starts Here */
+.empanelment-with-banks{
+  padding: 2rem 0;
+}
+.empanelment-with-banks h1{
+  font-size: 2.1rem;
+}
+.empanelment-with-banks .line{
+  width: 400px;
+}
+.bank-icon-row{
+  gap: 20px;
+  margin-top: 1rem;
+}
+.bank-icon-row img{
+  width: 80px;
+  height: 80px;
+}
+.bank-icon-row p{
+  font-size: 0.8rem;
+}
+.bank-icon-row:last-child{
+ align-self: flex-start;
+ padding: 0 40px;
+}
+
+#bank-logo-2{
+  width: 40px;
+  height: 40px;
+}
+#bank-logo-4,
+#bank-logo-5,
+#bank-logo-8,
+#bank-logo-9,
+#bank-logo-11,
+#bank-logo-12,
+#bank-logo-14,
+#bank-logo-16,
+#bank-logo-17,
+#bank-logo-18{
+  width: 50px;
+  height: 50px;
+}
+
+/* Financial Institutions Section Styles Starts Here */
+.financial-head .heading{
+  position: absolute;
+  top: 17%;
+}
+.financial-head .heading h1{
+  font-size: 1.8rem;
+}
+.institution-icon>div{
+  height: 160px;
+  width: 160px;
+}
+.institution-icon img{
+  width: 140px;
+  height: 140px;
+}
+.institution-icon p{
+  font-size: 0.8rem;
+}
+#institution-logo-1,
+#institution-logo-9{
+  width: 190px;
+  height: 190px;
+}
+
+/* Government Clients Section Styles Starts Here */
+.government-head .heading{
+  position: absolute;
+  top: 24%;
+}
+.government-head .heading h1{
+  font-size: 2rem;
+}
+.clients-icon img{
+  width: 130px;
+  height: 130px;
+}
+.clients-icon p{
+  font-size: 0.8rem;
+}
+
+#clients-logo-3,
+#clients-logo-4,
+#clients-logo-5,
+#clients-logo-22{
+  width: 100px;
+  height: 100px;
+}
+
+#clients-logo-6,
+#clients-logo-9,
+#clients-logo-11{
+  width: 70px;
+  height: 70px;
+}
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+/* Media for Navbar */
+nav{
+  padding: 6px 10px;
+}
+.nav-menu ul a {
+  display: none;
+}
+.nav-menu ul .fa-bars {
+  display: block;
+}
+.nav-menu-2{
+  padding: 0 50px 0 40vw;
+}
+.nav .logo img {
+  width: 140px;
+}
+
+
+/* Top Image Styles Starts Here */
+.top-image .left-text{
+  position: absolute;
+  top: 40%;
+  padding: 0.8rem 1.5rem 0.6rem 1.5rem;
+}
+.top-image .left-text h2{
+  font-size: 1.7rem;
+}
+
+/* Group Empanelments Styles Starts Here */
+.group-empanelment-content{
+  padding: 2rem 1rem;
+}
+.group-empanelment-content h1{
+  font-size: 2rem;
+}
+.group-empanelment-content p{
+  font-size: 1rem;
+}
+
+/* Empanelment with Banks Styles Starts Here */
+.empanelment-with-banks{
+  padding: 2rem 0;
+}
+.empanelment-with-banks h1{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.empanelment-with-banks .line{
+  width: 370px;
+  height: 4px;
+}
+.bank-icon-row{
+  gap: 10px;
+  margin-top: 1rem;
+}
+.bank-icon-row img{
+  width: 40px;
+  height: 40px;
+}
+.bank-icon-row p{
+  font-size: 0.6rem;
+}
+.bank-icon>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+  transition: all 0.4s ease;
+}
+.bank-icon-row:last-child{
+ align-self: flex-start;
+ padding: 0 5%;
+}
+
+#bank-logo-2{
+  width: 25px;
+  height: 25px;
+}
+#bank-logo-4,
+#bank-logo-5,
+#bank-logo-8,
+#bank-logo-9,
+#bank-logo-11,
+#bank-logo-12,
+#bank-logo-14,
+#bank-logo-16,
+#bank-logo-17,
+#bank-logo-18{
+  width: 30px;
+  height: 30px;
+}
+
+/* Financial Institutions Section Styles Starts Here */
+.financial-head .heading{
+  position: absolute;
+  top: 17%;
+}
+.financial-head .heading h1{
+  font-size: 1.2rem;
+}
+.institution-icon>div{
+  height: 160px;
+  width: 160px;
+}
+.institution-icon img{
+  width: 140px;
+  height: 140px;
+}
+.institution-icon p{
+  font-size: 0.8rem;
+}
+#institution-logo-1,
+#institution-logo-9{
+  width: 190px;
+  height: 190px;
+}
+
+/* Government Clients Section Styles Starts Here */
+.government-head .heading{
+  position: absolute;
+  top: 24%;
+}
+.government-head .heading h1{
+  font-size: 2rem;
+}
+.clients-icon img{
+  width: 130px;
+  height: 130px;
+}
+.clients-icon p{
+  font-size: 0.8rem;
+}
+
+#clients-logo-3,
+#clients-logo-4,
+#clients-logo-5,
+#clients-logo-22{
+  width: 100px;
+  height: 100px;
+}
+
+#clients-logo-6,
+#clients-logo-9,
+#clients-logo-11{
+  width: 70px;
+  height: 70px;
+}
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+/* Header Styles Starts Here */
+header {
+  padding: 5px 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.header {
+  font-size: 0.8rem;
+}
+.header a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.header .icons i {
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+.header .icons i:hover {
+  scale: 1.2;
+  color: #5f86c3;
+}
+.header .email i {
+  margin-right: 1px;
+}
+/* Header Styles Ends Here */
+
+/* Media for Navbar */
+nav{
+  padding: 6px 10px;
+}
+.nav-menu ul a {
+  display: none;
+}
+.nav-menu ul .fa-bars {
+  display: block;
+}
+.nav-menu-2{
+  padding: 0 50px 0 25vw;
+}
+.nav .logo img {
+  width: 110px;
+}
+}
